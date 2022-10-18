@@ -29,7 +29,7 @@ module.exports.getBSD = function(){
 module.exports.highGPA = ()=>{
     return new Promise((resolve, reject)=>{
             if(true){
-                resolve(students[3]);
+                resolve(students);
             }
        
         reject('"Failed finding the student with the highest GPA');

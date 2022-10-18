@@ -34,7 +34,7 @@ app.get("/BSD",(request, response) =>{
 app.get("/highGPA",(request, response) =>{
     students.highGPA().then((data)=>{
         response.send("<h4>Highest GPA:</h4>" + 
-        "Student ID:" + 4 );
+        "Student ID:");
     })
 });
 
