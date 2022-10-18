@@ -1,3 +1,16 @@
+/*********************************************************************************
+* BTI325 – Test 1
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy.
+* No part of this assignment has been copied manually or electronically from any other source
+* (including web sites) or distributed to other students.
+*
+* Name: _Ujjval_Patel_ Student ID: __153763214__ Date: _October 18, 2022_
+*
+* Online (Cyclic) URL:
+*  https://good-shoe-fly.cyclic.app/
+*
+********************************************************************************/
+
 const express = require('express');
 const { resolve } = require('path');
 const path = require('path');
