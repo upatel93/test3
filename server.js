@@ -1,5 +1,5 @@
 /*********************************************************************************
-* BTI325 – Test 1
+* BTI325 – Test 2
 * I declare that this assignment is my own work in accordance with Seneca Academic Policy.
 * No part of this assignment has been copied manually or electronically from any other source
 * (including web sites) or distributed to other students.
@@ -46,11 +46,17 @@ app.get("/BSD",(request, response) =>{
 
 app.get("/highGPA",(request, response) =>{
     students.highGPA().then((data)=>{
-        response.send("<h4>Highest GPA:</h4>" + 
-        "Student ID:");
+        response.send("<h4>Highest GPA:</h4>" +
+        "<p>Student ID: " + data[0].studId +"</p>"+
+        "<p>Student Name: "+ data[0].name + "</p>"+
+        "<p>Program: "+ data[0].program + "</p>"+
+        "<p>Student GPA: "+ data[0].gpa + "</p>"
+        );
     })
 });
 
+//"<h4>Highest GPA:</h4>" + 
+//"Student ID:"+
 app.get("*",(request, response) =>{
     response.send("Error 404: page not found.");
 });

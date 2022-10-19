@@ -28,11 +28,15 @@ module.exports.getBSD = function(){
 
 module.exports.highGPA = ()=>{
     return new Promise((resolve, reject)=>{
-            if(true){
-                resolve(students);
+        for(let i of students){
+            if(i.gpa == 4){
+                highestGPA.push(i)
             }
-       
-        reject('"Failed finding the student with the highest GPA');
+        }
+        if(highestGPA.length == 0){
+            reject('"Failed finding the student with the highest GPA');
+        }
+        resolve(highestGPA);
     });
 
 };
