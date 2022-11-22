@@ -48,6 +48,8 @@ app.get("/BSD",(request, response) =>{
 app.get("/highGPA",(request, response) =>{
     students.highGPA().then((data)=>{
         response.render("student",{student:data[0]});
+    }).catch((err)=>{
+        response.send(err);
     })
 });
 
