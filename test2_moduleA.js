@@ -44,7 +44,7 @@ module.exports.highGPA = ()=>{
             }
         }
         if(highestGPA.length == 0){
-            reject('"Failed finding the student with the highest GPA');
+            reject('Failed finding the student with the highest GPA');
         }
         resolve(highestGPA);
     });
