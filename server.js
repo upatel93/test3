@@ -14,10 +14,14 @@
 const express = require('express');
 const { resolve } = require('path');
 const path = require('path');
+const exphbs = require('express-handlebars');
 const students = require('./test2_moduleA');
+
 
 const app = express();
 
+app.engine('.hbs', exphbs.engine({ extname: '.hbs' }));
+app.set('view engine', '.hbs');
 
 let port = process.env.PORT || 8080;
 
