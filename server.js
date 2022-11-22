@@ -41,6 +41,8 @@ app.get("/",(request, response) => { // Home Route
 app.get("/BSD",(request, response) =>{
     students.getBSD().then((data)=>{
         response.json(data);
+    }).catch((err)=>{
+        response.send(err);
     })
 });
 
@@ -55,8 +57,6 @@ app.get("/highGPA",(request, response) =>{
     })
 });
 
-//"<h4>Highest GPA:</h4>" + 
-//"Student ID:"+
 app.get("*",(request, response) =>{
     response.send("Error 404: page not found.");
 });

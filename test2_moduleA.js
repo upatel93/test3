@@ -1,6 +1,7 @@
 const fileSystem = require('fs'); // including for reading files
 let students = []; // to hold the students in the array
 let highestGPA = [];
+let bsdStudents = []; // to hold bsd students..
 
 
 module.exports.init = function(){
@@ -19,10 +20,19 @@ module.exports.init = function(){
 
 module.exports.getBSD = function(){
     return new Promise((resolve,reject)=>{
-        if(students.length == 0){
-            reject("no results returned");
+        bsdStudents = []; // to clear
+
+        for( let i of students){
+            if(i.program == "BSD"){
+                console.log(i);
+                bsdStudents.push(i);
+            }
         }
-        resolve(students);
+
+        if(bsdStudents.length == 0){
+            reject("No results returned");
+        }
+        resolve(bsdStudents);
     });
 };
 
