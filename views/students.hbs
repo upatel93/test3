@@ -1,0 +1,27 @@
+<div>
+    <h1>Student List</h1>
+    
+    <table style="border: solid black 1px;">
+                <thead>
+                    <tr style="border: solid black 1px;"> 
+                        <th style= "border: solid black 1px;">   StudentId   </th>
+                        <th style="border: solid black 1px;">   Name   </th>
+                        <th style="border: solid black 1px;">   Program   </th>
+                        <th style="border: solid black 1px;">   GPA   </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each students}}
+                        <tr>
+                            <td style="border: solid black 1px;">{{this.studId}}</td>
+                            <td style="border: solid black 1px;">{{this.name}}</td>
+                            <td style="border: solid black 1px;">{{this.program}}</td>
+                            <td style="border: solid black 1px;">{{this.gpa}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+    </table>
+
+
+
+</div>

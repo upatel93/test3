@@ -1,4 +1,6 @@
+const { rejects } = require('assert');
 const fileSystem = require('fs'); // including for reading files
+const { resolve } = require('path');
 let students = []; // to hold the students in the array
 let highestGPA = [];
 let bsdStudents = []; // to hold bsd students..
@@ -24,7 +26,6 @@ module.exports.getBSD = function(){
 
         for( let i of students){
             if(i.program == "BSD"){
-                console.log(i);
                 bsdStudents.push(i);
             }
         }
@@ -50,3 +51,14 @@ module.exports.highGPA = ()=>{
     });
 
 };
+
+module.exports.allStudents = ()=>{
+    return new Promise ((resolve,reject)=>{
+        if(students.length > 0){
+            resolve(students);
+        }
+        else{
+            reject("No Students");
+        }
+    })
+}
